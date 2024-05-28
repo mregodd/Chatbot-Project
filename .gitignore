@@ -1,0 +1,27 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+chatbot-env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDE specific files
+.idea/
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Ignore the model file
+*.h5
+*.keras
