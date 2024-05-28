@@ -12,13 +12,18 @@
     },
     {
       "tag": "üniversite_bilgi",
-      "patterns": ["Fakülte nerede?", "Fakülte'nin konumu hakkında bilgi istiyorum.",],
-      "responses": ["Üniversitemiz Tekirdağ'da Çorlu İlçesinde yer almaktadır.", "Kampüsümüz Silahtarağa, Üniversite 1.Sokak No:13, 59860 Çorlu/Tekirdağ adresindedir.",]
-    }
-	{
+      "patterns": ["Fakülte nerede?", "Fakülte'nin konumu hakkında bilgi istiyorum."],
+      "responses": ["Üniversitemiz Tekirdağ'da Çorlu İlçesinde yer almaktadır.", "Kampüsümüz Silahtarağa, Üniversite 1.Sokak No:13, 59860 Çorlu/Tekirdağ adresindedir."]
+    },
+    {
       "tag": "teşekkür",
       "patterns": ["Teşekkürler", "Sağ ol", "Teşekkür ederim"],
       "responses": ["Rica ederim!", "Her zaman!", "Ne demek!"]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [],
+      "responses": ["Üzgünüm, ne demek istediğini anlayamadım."]
     }
   ]
 }
