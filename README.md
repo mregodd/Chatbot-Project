@@ -31,18 +31,25 @@ cd Chatbot-Project
 ````
 
 ### Adım 2: Sanal Ortam Oluşturun ve Aktifleştirin
-```python -m venv chatbot-env
+```bash
+python -m venv chatbot-env
 source chatbot-env/bin/activate  # Windows için: chatbot-env\Scripts\activate
 ```
 
 ### Adım 3: Gerekli Paketleri Yükleyin
-```pip install -r requirements.txt```
+```bash
+pip install -r requirements.txt
+```
 
 ### Adım 4: Modeli Eğitin
-```python models/model_train.py```
+```bash
+python models/model_train.py
+```
 
 ### Adım 5: Uygulamayı Başlatın
-```python app.py```
+```bash
+python app.py
+```
 
 ### Adım 6: Tarayıcıda Uygulamayı Açın
 Tarayıcınızda http://127.0.0.1:5000 adresine gidin ve chatbot'u kullanmaya başlayın.
