@@ -1,6 +1,5 @@
 # Chatbot-Project
 
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange.svg)
 
@@ -29,46 +28,46 @@ Bu proje, üniversite öğrencilerinin sıkça sorduğu soruları yanıtlamak ve
 ```bash
 git clone https://github.com/mregodd/Chatbot-Project.git
 cd Chatbot-Project
+````
+
+### Adım 2: Sanal Ortam Oluşturun ve Aktifleştirin
+```python -m venv chatbot-env
+source chatbot-env/bin/activate  # Windows için: chatbot-env\Scripts\activate
 ```
 
-#### Adım 2: Sanal Ortam Oluşturun ve Aktifleştirin
-python -m venv chatbot-env
-source chatbot-env/bin/activate  # Windows için: chatbot-env\Scripts\activate
+### Adım 3: Gerekli Paketleri Yükleyin
+```pip install -r requirements.txt```
 
-##### Adım 3: Gerekli Paketleri Yükleyin
-pip install -r requirements.txt
+### Adım 4: Modeli Eğitin
+```python models/model_train.py```
 
-###### Adım 4: Modeli Eğitin
-python models/model_train.py
+### Adım 5: Uygulamayı Başlatın
+```python app.py```
 
-####### Adım 5: Uygulamayı Başlatın
-python app.py
-
-######## Adım 6: Tarayıcıda Uygulamayı Açın
+### Adım 6: Tarayıcıda Uygulamayı Açın
 Tarayıcınızda http://127.0.0.1:5000 adresine gidin ve chatbot'u kullanmaya başlayın.
 
-#Dosya Yapısı
-- data/: Chatbot'un öğrenme ve yanıt verme verilerini içerir.
--- intents.json
+# Dosya Yapısı
 
-- models/: Makine öğrenimi modelleri ve eğitim dosyalarını içerir.
--- chatbot_model.py
--- model_train.py
+- **data/**: Chatbot'un öğrenme ve yanıt verme verilerini içerir.
+  - intents.json
 
-- static/: Statik dosyalar (CSS, JavaScript, görüntüler vb.).
--- style.css
+- **models/**: Makine öğrenimi modelleri ve eğitim dosyalarını içerir.
+  - chatbot_model.py
+  - model_train.py
 
-- templates/: HTML şablon dosyaları.
--- index.html
+- **static/**: Statik dosyalar (CSS, JavaScript, görüntüler vb.).
+  - style.css
 
---- app.py: Flask uygulamasının ana dosyası.
---- requirements.txt: Gerekli Python paketlerini listeler.
---- README.md: Proje hakkında bilgi verir.
+- **templates/**: HTML şablon dosyaları.
+  - index.html
 
+- **app.py**: Flask uygulamasının ana dosyası.
+- **requirements.txt**: Gerekli Python paketlerini listeler.
+- **README.md**: Proje hakkında bilgi verir.
 
----- Katkıda Bulunma ----
+## Katkıda Bulunma
 Katkıda bulunmak için lütfen bir pull request oluşturun veya bir issue açın. Her türlü katkı ve geri bildirim değerlidir.
 
-
----- İletişim ----
+## İletişim
 Herhangi bir soru veya geri bildirim için mregodd ile iletişime geçebilirsiniz.
