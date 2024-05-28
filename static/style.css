@@ -3,36 +3,38 @@ body {
 }
 
 #chatbox {
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
-    margin-top: 50px;
-    padding: 10px;
     border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    padding: 10px;
 }
 
 #messages {
-    height: 200px;
+    height: 300px;
     overflow-y: scroll;
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #ccc;
+    padding: 5px;
     margin-bottom: 10px;
+}
+
+#user-input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
 }
 
 .user-message {
     text-align: right;
+    color: blue;
     margin: 5px;
 }
 
 .bot-message {
     text-align: left;
+    color: green;
     margin: 5px;
-}
-
-#user-input {
-    width: 80%;
-    padding: 5px;
-}
-
-button {
-    padding: 5px;
 }
