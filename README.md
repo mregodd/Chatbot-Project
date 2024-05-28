@@ -61,7 +61,10 @@ Tarayıcınızda http://127.0.0.1:5000 adresine gidin ve chatbot'u kullanmaya ba
 
 - **models/**: Makine öğrenimi modelleri ve eğitim dosyalarını içerir.
   - chatbot_model.py
-  - model_train.py
+  - data_loader.py
+  - predictor.py
+  - trainer.py
+  - utils.py
 
 - **static/**: Statik dosyalar (CSS, JavaScript, görüntüler vb.).
   - style.css
