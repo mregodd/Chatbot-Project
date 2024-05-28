@@ -1,0 +1,24 @@
+{
+  "intents": [
+    {
+      "tag": "selamlama",
+      "patterns": ["Merhaba", "Selam", "Nasılsın", "İyi günler"],
+      "responses": ["Merhaba!", "Selam!", "Nasılsın?", "İyi günler!"]
+    },
+    {
+      "tag": "veda",
+      "patterns": ["Hoşçakal", "Görüşürüz", "Bay bay"],
+      "responses": ["Hoşçakal!", "Görüşürüz!", "Kendine iyi bak!"]
+    },
+    {
+      "tag": "üniversite_bilgi",
+      "patterns": ["Fakülte nerede?", "Fakülte'nin konumu hakkında bilgi istiyorum.",],
+      "responses": ["Üniversitemiz Tekirdağ'da Çorlu İlçesinde yer almaktadır.", "Kampüsümüz Silahtarağa, Üniversite 1.Sokak No:13, 59860 Çorlu/Tekirdağ adresindedir.",]
+    }
+	{
+      "tag": "teşekkür",
+      "patterns": ["Teşekkürler", "Sağ ol", "Teşekkür ederim"],
+      "responses": ["Rica ederim!", "Her zaman!", "Ne demek!"]
+    }
+  ]
+}
