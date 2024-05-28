@@ -1,22 +1,18 @@
-import random
 import numpy as np
-import os
 from tensorflow.keras.models import load_model
-from models.data_loader import load_intents 
-from models.utils import tokenize_and_lemmatize
+from data_loader import load_intents
+from utils import tokenize_and_lemmatize
 
 intents = load_intents()
-model = load_model(os.path.join(os.path.dirname(__file__), 'chatbot_model.keras'))
+model = load_model('models/chatbot_model.keras')
 
 words = []
 classes = []
-documents = []
 
 for intent in intents['intents']:
     for pattern in intent['patterns']:
         word_list = tokenize_and_lemmatize(pattern)
         words.extend(word_list)
-        documents.append((word_list, intent['tag']))
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
 
