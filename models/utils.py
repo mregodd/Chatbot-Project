@@ -20,4 +20,11 @@ def normalize_sentence(sentence):
 def tokenize_and_lemmatize(sentence):
     sentence = normalize_sentence(sentence)
     sentence_words = nltk.word_tokenize(sentence)
-    return [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
+    lemmatized_words = []
+    for word in sentence_words:
+        if word not in ignore_words:
+            if word.lower() == 'nasılsın':
+                lemmatized_words.extend(['nasıl', 'ol'])
+            else:
+                lemmatized_words.append(lemmatizer.lemmatize(word.lower()))
+    return lemmatized_words
