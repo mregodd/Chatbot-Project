@@ -1,4 +1,5 @@
 import random
+import time
 import numpy as np
 import os
 from tensorflow.keras.models import load_model
@@ -52,7 +53,12 @@ def get_response(ints, intents_json):
     return None
 
 def chatbot_response(msg):
+    start_time = time.time()
     ints = predict_class(msg)
     if ints[0]['intent'] == 'unknown':
         return "Üzgünüm, ne demek istediğini anlayamadım."
-    return get_response(ints, intents)
+    else:
+        response = get_response(ints, intents)
+    end_time = time.time()
+    print(f"Response time: {end_time - start_time} seconds")
+    return response
