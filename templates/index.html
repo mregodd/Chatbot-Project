@@ -15,7 +15,7 @@
     <script>
         function sendMessage() {
             const userInput = document.getElementById("user-input").value;
-            if (userInput.trim() === "") return; 
+            if (userInput.trim() === "") return;
             fetch("/get", {
                 method: "POST",
                 headers: {
@@ -26,11 +26,24 @@
             .then(response => response.json())
             .then(data => {
                 const messages = document.getElementById("messages");
-                messages.innerHTML += "<div class='user-message'>" + userInput + "</div>";
-                messages.innerHTML += "<div class='bot-message'>" + data.response + "</div>";
-                messages.scrollTop = messages.scrollHeight; 
+                const userMessage = document.createElement("div");
+                userMessage.className = "user-message";
+                userMessage.textContent = userInput;
+                messages.appendChild(userMessage);
+                
+                const botMessage = document.createElement("div");
+                botMessage.className = "bot-message";
+                botMessage.innerHTML = makeLinksClickable(data.response);
+                messages.appendChild(botMessage);
+
+                messages.scrollTop = messages.scrollHeight;
             });
             document.getElementById("user-input").value = "";
+        }
+
+        function makeLinksClickable(text) {
+            const urlPattern = /(https?:\/\/[^\s]+)/g;
+            return text.replace(urlPattern, '<a href="$1" target="_blank">$1</a>');
         }
     </script>
 </body>
