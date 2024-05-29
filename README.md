@@ -71,6 +71,9 @@ Tarayıcınızda http://127.0.0.1:5000 adresine gidin ve chatbot'u kullanmaya ba
 
 - **templates/**: HTML şablon dosyaları.
   - index.html
+  
+- **tests/**: Test dosyaları.
+  - test_chatbot.py
 
 - **app.py**: Flask uygulamasının ana dosyası.
 - **requirements.txt**: Gerekli Python paketlerini listeler.
