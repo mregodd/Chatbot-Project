@@ -2,8 +2,13 @@
   "intents": [
     {
       "tag": "selamlama",
-      "patterns": ["Merhaba", "Selam", "Nasılsın", "İyi günler"],
-      "responses": ["Merhaba!", "Selam!", "Nasılsın?", "İyi günler!"]
+      "patterns": ["Merhaba", "Selam"],
+      "responses": ["Merhaba!", "Selam!"]
+    },
+	{
+      "tag": "hal_hatır",
+      "patterns": ["Nasılsın", "İyi günler"],
+      "responses": ["İyiyim teşekkür ederim, sen nasılsın?", "İyi günler dilerim!"]
     },
     {
       "tag": "veda",
@@ -11,14 +16,41 @@
       "responses": ["Hoşçakal!", "Görüşürüz!", "Kendine iyi bak!"]
     },
     {
-      "tag": "üniversite_bilgi",
+      "tag": "üniversite_konum_bilgi",
       "patterns": ["Fakülte nerede?", "Fakülte'nin konumu hakkında bilgi istiyorum."],
       "responses": ["Üniversitemiz Tekirdağ'da Çorlu İlçesinde yer almaktadır.", "Kampüsümüz Silahtarağa, Üniversite 1.Sokak No:13, 59860 Çorlu/Tekirdağ adresindedir."]
+    },
+	{
+      "tag": "dekan_bilgi",
+      "patterns": ["Fakülte'nin dekanı kim?", "Fakülte dekanı"],
+      "responses": ["Fakültemizin dekanı Prof.Dr. Lokman Hakan TECER'dir."]
+    },
+	{
+      "tag": "bilg_müh_bölüm_başkanı_bilgi",
+      "patterns": ["Bilgisayar mühendisliği bölüm başkanı kim?", "bilgisayar mühendisliği bölüm başkanı"],
+      "responses": ["Bilgisayar mühendisliği bölümünün başkanı Doç.Dr. Ercan BULUŞ'dur."]
+    },
+	{
+      "tag": "bilg_müh_hocaları_bilgi",
+      "patterns": ["Bilgisayar mühendisliği akademik kadrosunda kimler var?", "bilgisayar mühendisliği akademi kadrosu", "bilgisayar mühendisliği hocaları", "bilgisayar mühendisliği öğretmenleri"],
+      "responses": [
+	  "Bilgisayar mühendisliği bölümünün akademik kadrosu:\nDoç.Dr. Ercan BULUŞ\nProf.Dr. Erdinç UZUN\nDoç.Dr. Pınar TÜFEKCİ\nDoç.Dr. Ufuk ÇETİN\nDoç.Dr. Ahmet SAYGILI\nDoç.Dr. Pınar CİHAN\nDr.Öğr.Üyesi Halil Nusret BULUŞ\nDr.Öğr.Üyesi Erkan ÖZHAN\nDr.Öğr.Üyesi Rabia KORKMAZ TAN\nAraş.Gör. Burak SEVİNÇ\nAraş.Gör. Güvenç USANMAZ\nAraş.Gör. Nihat Eren ÖZMEN"
+	  ]
+    },
+	{
+      "tag": "diğer_bölümler_başkan_bilgi",
+      "patterns": ["Biyomedikal mühendisliği bölüm başkanı kim?","Çevre mühendisliği bölüm başkanı kim?","Elektrik-Elektronik mühendisliği bölüm başkanı kim?","Endüstri mühendisliği bölüm başkanı kim?","İnşaat mühendisliği bölüm başkanı kim?","Makine mühendisliği bölüm başkanı kim?","Tekstil mühendisliği bölüm başkanı kim?"],
+      "responses": ["İlgili bilgiye bu adresten ulaşabilirsiniz: https://cmf.nku.edu.tr/Kurumsal-AkademikPersonel/0/s/9790/20906"]
+    },
+	{
+      "tag": "diğer_bölümler_hocaları_bilgi",
+      "patterns": ["Biyomedikal mühendisliği akademi kadrosu","Çevre mühendisliği akademi kadrosu","Elektrik-Elektronik mühendisliği akademi kadrosu","Endüstri mühendisliği akademi kadrosu","İnşaat mühendisliği akademi kadrosu","Makine mühendisliği akademi kadrosu","Tekstil mühendisliği akademi kadrosu"],
+      "responses": ["İlgili bilgiye bu adresten ulaşabilirsiniz: https://cmf.nku.edu.tr/Kurumsal-AkademikPersonel/0/s/9790/20906"]
     },
     {
       "tag": "teşekkür",
       "patterns": ["Teşekkürler", "Sağ ol", "Teşekkür ederim"],
-      "responses": ["Rica ederim!", "Her zaman!", "Ne demek!"]
+      "responses": ["Rica ederim!", "Her zaman!", "Başka bir sorunuz var ise yardımcı olmak isterim."]
     },
     {
       "tag": "unknown",
