@@ -6,10 +6,13 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <button id="theme-toggle" onclick="toggleTheme()">Aydınlık Mod</button>
     <div id="chatbox">
         <div id="messages"></div>
-        <input id="user-input" type="text" placeholder="Bir mesaj yazın..." onkeydown="if (event.key === 'Enter') { sendMessage(); }">
-        <button onclick="sendMessage()">Gönder</button>
+        <div class="input-container">
+            <input id="user-input" type="text" placeholder="Bir mesaj yazın..." onkeydown="if (event.key === 'Enter') { sendMessage(); }">
+            <button onclick="sendMessage()">Gönder</button>
+        </div>
     </div>
 
     <script>
@@ -45,6 +48,22 @@
             const urlPattern = /(https?:\/\/[^\s]+)/g;
             return text.replace(urlPattern, '<a href="$1" target="_blank">$1</a>');
         }
+        function toggleTheme() {
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+   
+    if (body.classList.contains("dark-theme")) {
+        body.classList.remove("dark-theme");
+        themeToggle.textContent = "Aydınlık Mod";
+    } 
+    
+    else {
+        body.classList.add("dark-theme");
+        themeToggle.textContent = "Karanlık Mod";
+    }
+}
+
     </script>
 </body>
 </html>

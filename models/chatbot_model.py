@@ -16,7 +16,7 @@ from models.utils import tokenize_and_lemmatize
 
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s %(levelname)s %(message)s') 
 intents = load_intents()
-model = load_model(os.path.join(current_directory, '..', 'chatbot_model.keras')) 
+model = load_model(os.path.join(current_directory,  'chatbot_model.keras')) 
 
 words = []
 classes = []
