@@ -1,3 +1,4 @@
+
 {
   "intents": [
     {
@@ -51,6 +52,48 @@
       "tag": "teşekkür",
       "patterns": ["Teşekkürler", "Sağ ol", "Teşekkür ederim"],
       "responses": ["Rica ederim!", "Her zaman!", "Başka bir sorunuz var ise yardımcı olmak isterim."]
+    },
+    {
+      "tag":"staj_basvuru_adım",
+      "patterns":["Çorlu Mühendislik fakültesi staj başvuru adımları", "staj başvuru nasıl yapılır","staj başvuru adımları"],
+      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajBa%C5%9Fvurusu%C4%B0%C3%A7in%C4%B0zlenmesiGerekenAd%C4%B1mlar/0/s/7023/8862"]
+
+    },
+    {
+      "tag":"staj_yönergesi",
+      "patterns":["Çorlu Mühendislik fakültesi staj yönergesi", "staj yönergesi","staj bilgi"],
+      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajY%C3%B6nergesi/0/s/7023/4299"]
+
+    },
+    {
+      "tag":"staj_tarihleri",
+      "patterns":["Çorlu Mühendislik fakültesi staj tarihleri","staj tarih","yaz staj"],
+      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajTarihleri/0/s/7023/8832"]
+
+    },
+    {
+      "tag":"staj_belgeleri",
+      "patterns":["Çorlu Mühendislik fakültesi staj için gerekli belgeler","staj belgeri","yaz staj belgeleri","staj zorunluluk belgesi"],
+      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajBa%C5%9Fvurusu%C4%B0%C3%A7inGerekenEvraklar/0/s/7023/8834"]
+
+    },
+    {
+      "tag":"staj_komisyon",
+      "patterns":["Çorlu Mühendislik fakültesi staj komisyon üyeleri","staj komisyonu","fakülte staj komisyonu"],
+      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/Komisyonlar-StajKomisyonu/0/s/7023/9321"]
+
+    },
+    {
+      "tag":"staj_sözlesme",
+      "patterns":["Çorlu Mühendislik fakültesi staj için işyeri staj sözleşmesi","staj sözleşmesi","sözleşme"],
+      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/%C4%B0%C5%9FyeriStajS%C3%B6zle%C5%9Fmesi/0/s/7023/23785"]
+
+    },
+    {
+      "tag":"staj_defteri",
+      "patterns":["Çorlu Mühendislik fakültesi staj için staj defteri","staj defteri","defter","pratik çalışma belgesi"],
+      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajDefteri/0/s/7023/29399"]
+
     },
     {
       "tag": "unknown",
