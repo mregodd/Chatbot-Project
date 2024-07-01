@@ -31,7 +31,7 @@ def bow(sentence):
 def predict_class(sentence):
     p = bow(sentence)
     res = model.predict(np.array([p]))[0]
-    ERROR_THRESHOLD = 0.75
+    ERROR_THRESHOLD = 0.70
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True)
     

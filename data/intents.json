@@ -3,8 +3,8 @@
   "intents": [
     {
       "tag": "selamlama",
-      "patterns": ["Merhaba", "Selam"],
-      "responses": ["Merhaba!", "Selam!"]
+      "patterns": ["Merhaba", "Selam", "Selamlar", "Slm"],
+      "responses": ["Merhaba!", "Selam!","Selamlar, hoşgeldiniz."]
     },
 	{
       "tag": "hal_hatır",

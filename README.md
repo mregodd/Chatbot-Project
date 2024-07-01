@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ### Adım 4: Modeli Eğitin
 ```bash
-python models/model_train.py
+python models/trainer.py
 ```
 
 ### Adım 5: Uygulamayı Başlatın

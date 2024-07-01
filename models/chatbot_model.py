@@ -16,7 +16,7 @@ from models.utils import tokenize_and_lemmatize
 
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s %(levelname)s %(message)s') 
 intents = load_intents()
-model = load_model(os.path.join(current_directory,  'chatbot_model.keras')) 
+model = load_model(os.path.join(current_directory, '..', 'chatbot_model.keras')) 
 
 words = []
 classes = []
@@ -47,7 +47,7 @@ def predict_class(sentence):
     try:
         p = bow(sentence)
         res = model.predict(np.array([p]))[0]
-        ERROR_THRESHOLD = 0.75
+        ERROR_THRESHOLD = 0.70
         results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
         results.sort(key=lambda x: x[1], reverse=True)
         
