@@ -9,7 +9,12 @@
 	{
       "tag": "hal_hatır",
       "patterns": ["Nasılsın", "İyi günler"],
-      "responses": ["İyiyim teşekkür ederim, sen nasılsın?", "İyi günler dilerim!"]
+      "responses": ["İyiyim teşekkür ederim, sen nasılsın?"]
+    },
+    {
+      "tag": "hal_hatır_cevap",
+      "patterns": ["iyiyim", "İyiyim teşekkür ederim"],
+      "responses": ["Sana nasıl yardımcı olabilirim?", "Ne konuda yardımcı olmamı istersin?"]
     },
     {
       "tag": "veda",
@@ -17,84 +22,445 @@
       "responses": ["Hoşçakal!", "Görüşürüz!", "Kendine iyi bak!"]
     },
     {
-      "tag": "üniversite_konum_bilgi",
-      "patterns": ["Fakülte nerede?", "Fakülte'nin konumu hakkında bilgi istiyorum."],
-      "responses": ["Üniversitemiz Tekirdağ'da Çorlu İlçesinde yer almaktadır.", "Kampüsümüz Silahtarağa, Üniversite 1.Sokak No:13, 59860 Çorlu/Tekirdağ adresindedir."]
-    },
-	{
-      "tag": "dekan_bilgi",
-      "patterns": ["Fakülte'nin dekanı kim?", "Fakülte dekanı"],
-      "responses": ["Fakültemizin dekanı Prof.Dr. Lokman Hakan TECER'dir."]
-    },
-	{
-      "tag": "bilg_müh_bölüm_başkanı_bilgi",
-      "patterns": ["Bilgisayar mühendisliği bölüm başkanı kim?", "bilgisayar mühendisliği bölüm başkanı"],
-      "responses": ["Bilgisayar mühendisliği bölümünün başkanı Doç.Dr. Ercan BULUŞ'dur."]
-    },
-	{
-      "tag": "bilg_müh_hocaları_bilgi",
-      "patterns": ["Bilgisayar mühendisliği akademik kadrosunda kimler var?", "bilgisayar mühendisliği akademi kadrosu", "bilgisayar mühendisliği hocaları", "bilgisayar mühendisliği öğretmenleri"],
-      "responses": [
-	  "Bilgisayar mühendisliği bölümünün akademik kadrosu:\nDoç.Dr. Ercan BULUŞ\nProf.Dr. Erdinç UZUN\nDoç.Dr. Pınar TÜFEKCİ\nDoç.Dr. Ufuk ÇETİN\nDoç.Dr. Ahmet SAYGILI\nDoç.Dr. Pınar CİHAN\nDr.Öğr.Üyesi Halil Nusret BULUŞ\nDr.Öğr.Üyesi Erkan ÖZHAN\nDr.Öğr.Üyesi Rabia KORKMAZ TAN\nAraş.Gör. Burak SEVİNÇ\nAraş.Gör. Güvenç USANMAZ\nAraş.Gör. Nihat Eren ÖZMEN"
-	  ]
-    },
-	{
-      "tag": "diğer_bölümler_başkan_bilgi",
-      "patterns": ["Biyomedikal mühendisliği bölüm başkanı kim?","Çevre mühendisliği bölüm başkanı kim?","Elektrik-Elektronik mühendisliği bölüm başkanı kim?","Endüstri mühendisliği bölüm başkanı kim?","İnşaat mühendisliği bölüm başkanı kim?","Makine mühendisliği bölüm başkanı kim?","Tekstil mühendisliği bölüm başkanı kim?"],
-      "responses": ["İlgili bilgiye bu adresten ulaşabilirsiniz: https://cmf.nku.edu.tr/Kurumsal-AkademikPersonel/0/s/9790/20906"]
-    },
-	{
-      "tag": "diğer_bölümler_hocaları_bilgi",
-      "patterns": ["Biyomedikal mühendisliği akademi kadrosu","Çevre mühendisliği akademi kadrosu","Elektrik-Elektronik mühendisliği akademi kadrosu","Endüstri mühendisliği akademi kadrosu","İnşaat mühendisliği akademi kadrosu","Makine mühendisliği akademi kadrosu","Tekstil mühendisliği akademi kadrosu"],
-      "responses": ["İlgili bilgiye bu adresten ulaşabilirsiniz: https://cmf.nku.edu.tr/Kurumsal-AkademikPersonel/0/s/9790/20906"]
-    },
-    {
       "tag": "teşekkür",
       "patterns": ["Teşekkürler", "Sağ ol", "Teşekkür ederim"],
       "responses": ["Rica ederim!", "Her zaman!", "Başka bir sorunuz var ise yardımcı olmak isterim."]
     },
     {
-      "tag":"staj_basvuru_adım",
-      "patterns":["Çorlu Mühendislik fakültesi staj başvuru adımları", "staj başvuru nasıl yapılır","staj başvuru adımları"],
-      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajBa%C5%9Fvurusu%C4%B0%C3%A7in%C4%B0zlenmesiGerekenAd%C4%B1mlar/0/s/7023/8862"]
-
+      "tag": "üniversite_konum_bilgi",
+      "patterns": ["Fakülte nerede?", "Fakülte'nin konumu hakkında bilgi istiyorum.","fakülte konum"],
+      "responses": ["Üniversitemiz Tekirdağ'da Çorlu İlçesinde yer almaktadır.", "Kampüsümüz Silahtarağa, Üniversite 1.Sokak No:13, 59860 Çorlu/Tekirdağ adresindedir."]
     },
+	{
+      "tag": "dekan_bilgi",
+      "patterns": ["Fakülte'nin dekanı kim?", "Fakülte dekanı","dekan"],
+      "responses": ["Fakültemizin dekanı Prof.Dr. Lokman Hakan TECER'dir."]
+    },
+    {
+      "tag": "dekan_yardımcıları_bilgisi",
+      "patterns": [
+        "Dekan yardımcıları kimlerdir?",
+        "Fakülte dekan yardımcıları kimlerdir?",
+        "dekan yardımcı"
+      ],
+      "responses": [
+        "Dekan yardımcılarımız Prof.Dr. Gül KAYKIOĞLU ve Doç.Dr. Pınar CİHAN'dır."
+      ]
+    },
+	{
+      "tag": "bilg_müh_bölüm_başkanı_bilgi",
+      "patterns": ["Bilgisayar mühendisliği bölüm başkanı kim?", "bilgisayar mühendisliği bölüm başkanı","bilgisayar başkan"],
+      "responses": ["Bilgisayar mühendisliği bölümünün başkanı Doç.Dr. Ercan BULUŞ'dur."]
+    },
+    {
+      "tag": "biyomedikal_başkanı",
+      "patterns": [
+        "Biyomedikal mühendisliği bölüm başkanı kimdir?",
+        "Biyomedikal mühendisliği bölümü başkanı",
+        "biyomedikal başkan"
+      ],
+      "responses": [
+        "Biyomedikal mühendisliği bölüm başkanı Prof.Dr. Betül TAŞDELEN'dir."
+      ]
+    },
+    {
+      "tag": "çevre_başkanı",
+      "patterns": [
+        "Çevre mühendisliği bölüm başkanı kimdir?",
+        "Çevre mühendisliği bölümü başkanı",
+        "çevre başkan"
+      ],
+      "responses": [
+        "Çevre mühendisliği bölüm başkanı Prof.Dr. Lokman Hakan TECER'dir."
+      ]
+    },
+    {
+      "tag": "elektrik_elektronik_başkanı",
+      "patterns": [
+        "Elektrik-Elektronik mühendisliği bölüm başkanı kimdir?",
+        "Elektrik-Elektronik mühendisliği bölümü başkanı",
+        "ee başkan",
+        "elektrik-elektronik başkan"
+      ],
+      "responses": [
+        "Elektrik-Elektronik mühendisliği bölüm başkanı Prof.Dr. Hafız ALİSOY'dur."
+      ]
+    },
+    {
+      "tag": "endüstri_başkanı",
+      "patterns": [
+        "Endüstri mühendisliği bölüm başkanı kimdir?",
+        "Endüstri mühendisliği bölümü başkanı",
+        "endüstri başkan"
+      ],
+      "responses": [
+        "Endüstri mühendisliği bölüm başkanı Prof.Dr. Aysun SAĞBAŞ'tır."
+      ]
+    },
+    {
+      "tag": "inşaat_başkanı",
+      "patterns": [
+        "İnşaat mühendisliği bölüm başkanı kimdir?",
+        "İnşaat mühendisliği bölümü başkanı",
+        "inşaat başkan"
+
+      ],
+      "responses": [
+        "İnşaat mühendisliği bölüm başkanı Prof.Dr. Sinan ŞAHİN'dir."
+      ]
+    },
+    {
+      "tag": "makine_başkanı",
+      "patterns": [
+        "Makine mühendisliği bölüm başkanı kimdir?",
+        "Makine mühendisliği bölümü başkanı",
+        "makine başkan"
+      ],
+      "responses": [
+        "Makine mühendisliği bölüm başkanı Prof.Dr. Bahar UYMAZ'dır."
+      ]
+    },
+    {
+      "tag": "tekstil_başkanı",
+      "patterns": [
+        "Tekstil mühendisliği bölüm başkanı kimdir?",
+        "Tekstil mühendisliği bölümü başkanı",
+        "tekstil başkan"
+      ],
+      "responses": [
+        "Tekstil mühendisliği bölüm başkanı Prof.Dr. Pelin GÜRKAN ÜNAL'dır."
+      ]
+    },
+    {
+      "tag": "bölümler_hocaları_bilgi",
+      "patterns": ["Çorlu Mühendislik fakültesi akademik kadro","ÇMF akademik kadro","fakülte akademik kadro"],
+      "responses": ["İlgili bilgiye bu adresten ulaşabilirsiniz: https://cmf.nku.edu.tr/Kurumsal-AkademikPersonel/0/s/9790/20906"]
+    },
+    
+    {
+      "tag": "bilg_müh_hocaları_bilgi",
+      "patterns": [
+        "Bilgisayar mühendisliği akademik kadrosunda kimler var?",
+        "bilgisayar mühendisliği akademi kadrosu",
+        "bilgisayar mühendisliği hocaları",
+        "bilgisayar mühendisliği öğretmenleri"
+      ],
+      "responses": [
+        "Bilgisayar mühendisliği bölümünün akademik kadrosu:\n- Doç. Dr. Ercan BULUŞ,\n- Prof. Dr. Erdinç UZUN,\n- Doç. Dr. Pınar TÜFEKCİ,\n- Doç. Dr. Ufuk ÇETİN,\n- Doç. Dr. Ahmet SAYGILI,\n- Doç. Dr. Pınar CİHAN,\n- Dr. Öğr. Üyesi Halil Nusret BULUŞ,\n- Dr. Öğr. Üyesi Erkan ÖZHAN,\n- Dr. Öğr. Üyesi Rabia KORKMAZ TAN,\n- Araş. Gör. Burak SEVİNÇ,\n- Araş. Gör. Güvenç USANMAZ,\n- Araş. Gör. Nihat Eren ÖZMEN"
+      ]
+    },
+    {
+      "tag": "biyomedikal_mühendisliği_bilgi",
+      "patterns": [
+        "Biyomedikal mühendisliği akademik kadrosu",
+        "Biyomedikal mühendisliği bölümü hocaları",
+        "Biyomedikal mühendisliği öğretim üyeleri"
+      ],
+      "responses": [
+        "Biyomedikal mühendisliği bölümünün akademik kadrosu:\n- Prof.Dr. Betül TAŞDELEN (BÖLÜM BAŞKANI)\n- Prof.Dr. Neslihan DİKBAŞ\n- Doç.Dr. Rıfat Koray ÇİFTÇİ\n- Doç.Dr. Pınar NARTOP\n- Doç.Dr. İsmail DEVECİOĞLU\n- Dr.Öğr.Üyesi Sarkis SÖZKES\n- Dr.Öğr.Üyesi Mustafa ARAS\n- Öğr.Gör. Oya ALTINOK\n- Araş.Gör. Nadide Gülşah GÜLENÇ"
+      ]
+    },
+    {
+      "tag": "çevre_mühendisliği_bilgi",
+      "patterns": [
+        "Çevre mühendisliği akademik kadrosu",
+        "Çevre mühendisliği bölümü hocaları",
+        "Çevre mühendisliği öğretim üyeleri"
+      ],
+      "responses": [
+        "Çevre mühendisliği bölümünün akademik kadrosu:\n- Prof.Dr. Lokman Hakan TECER (BÖLÜM BAŞKANI)\n- Prof.Dr. Süreyya Meriç PAGANO\n- Prof.Dr. Günay YILDIZ TÖRE\n- Prof.Dr. Tolga TUNÇAL\n- Prof.Dr. Yalçın GÜNEŞ\n- Prof.Dr. Ali Rıza DİNÇER\n- Prof.Dr. Füsun EKMEKYAPAR\n- Prof.Dr. Elçin GÜNEŞ\n- Prof.Dr. Asude HANEDAR\n- Prof.Dr. Gül KAYKIOĞLU\n- Prof.Dr. Zeki Ünal YÜMÜN\n- Prof.Dr. Deniz İzlen ÇİFÇİ\n- Doç.Dr. Fatma Füsun UYSAL\n- Doç.Dr. Can Burak ÖZKAL\n- Doç.Dr. Nesli AYDIN\n- Dr.Öğr.Üyesi Tuba ÖZTÜRK\n- Dr.Öğr.Üyesi Şeyma ORDU\n- Arş.Gör.Dr. Burçin Coşkun"
+      ]
+    },
+    {
+      "tag": "elektrik_elektronik_mühendisliği_bilgi",
+      "patterns": [
+        "Elektrik-elektronik mühendisliği akademik kadrosu",
+        "Elektrik-elektronik mühendisliği bölümü hocaları",
+        "Elektrik-elektronik mühendisliği öğretim üyeleri",
+        "EE mühendisliği akademik kadrosu"
+      ],
+      "responses": [
+        "Elektrik-elektronik mühendisliği bölümünün akademik kadrosu:\n- Prof.Dr. Hafız ALİSOY (BÖLÜM BAŞKANI)\n- Prof.Dr. Reşat MUTLU\n- Dr.Öğr.Üyesi Arif Kıvanç Üstün\n- Dr.Öğr.Üyesi Meltem Apaydın Üstün\n- Dr.Öğr.Üyesi Mustafa KONAL\n- Dr.Öğr.Üyesi Lütfi ULUSOY"
+      ]
+    },
+    {
+      "tag": "elektronik_haberleşme_mühendisliği_bilgi",
+      "patterns": [
+        "Elektronik ve haberleşme mühendisliği akademik kadrosu",
+        "Elektronik ve haberleşme mühendisliği bölümü hocaları",
+        "Elektronik ve haberleşme mühendisliği öğretim üyeleri"
+      ],
+      "responses": [
+        "Elektronik ve haberleşme mühendisliği bölümünün akademik kadrosu:\n- Prof.Dr. Hafız ALİSOY (BÖLÜM BAŞKANI)\n- Dr.Öğr.Üyesi Hasan DEMİR\n- Dr.Öğr.Üyesi Özkan ARSLAN\n- Öğr.Gör. Bilge ÖZLÜŞEN\n- Araş.Gör. Serap KILINÇ EVRAN"
+      ]
+    },
+    {
+      "tag": "endüstri_mühendisliği_bilgi",
+      "patterns": [
+        "Endüstri mühendisliği akademik kadrosu",
+        "Endüstri mühendisliği bölümü hocaları",
+        "Endüstri mühendisliği öğretim üyeleri"
+      ],
+      "responses": [
+        "Endüstri mühendisliği bölümünün akademik kadrosu:\n- Prof.Dr. Aysun SAĞBAŞ (BÖLÜM BAŞKANI)\n- Prof.Dr. Kemal Güven GÜLEN\n- Doç.Dr. Ulviye POLAT\n- Araş.Gör. Necip Fazıl KARAKURT"
+      ]
+    },
+    {
+      "tag": "inşaat_mühendisliği_bilgi",
+      "patterns": [
+        "İnşaat mühendisliği akademik kadrosu",
+        "İnşaat mühendisliği bölümü hocaları",
+        "İnşaat mühendisliği öğretim üyeleri"
+      ],
+      "responses": [
+        "İnşaat mühendisliği bölümünün akademik kadrosu:\n- Prof.Dr. Sinan ŞAHİN (BÖLÜM BAŞKANI)\n- Prof.Dr. Zekeriya AYDIN\n- Doç.Dr. Güler GAYGUSUZOĞLU\n- Doç.Dr. Rafael SHALIYEV\n- Dr.Öğr.Üyesi Ayşe Nur ÇİÇEK\n- Dr.Öğr.Üyesi Emre GÜLER\n- Dr.Öğr.Üyesi Fatma Nur ÇİÇEK\n- Araş.Gör. Abdullah ÇİÇEK\n- Araş.Gör. Mustafa Kemal GÜLER"
+      ]
+    },
+
+    {
+      "tag": "makine_mühendisliği_bilgi",
+      "patterns": [
+        "Makine mühendisliği akademik kadrosu",
+        "Makine mühendisliği bölümü hocaları",
+        "Makine mühendisliği öğretim üyeleri"
+      ],
+      "responses": [
+        "Makine mühendisliği bölümünün akademik kadrosu:\n- Prof.Dr. Mustafa Kemal KÖSE (BÖLÜM BAŞKANI)\n- Prof.Dr. Hasan Hüseyin BALCI\n- Prof.Dr. İbrahim DİNÇER\n- Doç.Dr. Mustafa ÖZDEMİR\n- Doç.Dr. Hüseyin AVCI\n- Dr.Öğr.Üyesi Ali Rıza YILDIRIM\n- Dr.Öğr.Üyesi Emre GÜLER\n- Araş.Gör. Mustafa Kemal GÜLER\n- Araş.Gör. Abdullah ÇİÇEK"
+      ]
+    },
+
+    {
+      "tag": "tekstil_mühendisliği_bilgi",
+      "patterns": [
+        "Tekstil mühendisliği akademik kadrosu",
+        "Tekstil mühendisliği bölümü hocaları",
+        "Tekstil mühendisliği öğretim üyeleri"
+      ],
+      "responses": [
+        "Tekstil mühendisliği bölümünün akademik kadrosu:\n- Prof.Dr. Pelin GÜRKAN ÜNAL (BÖLÜM BAŞKANI)\n- Prof.Dr. Ayşe ÇELİK\n- Prof.Dr. Fatma GÖKTEPE\n- Prof.Dr. Özer GÖKTEPE\n- Prof.Dr. Levent ÖNAL\n- Prof.Dr. Hikmet Ziya ÖZEK\n- Prof.Dr. Rıza ATAV\n- Prof.Dr. Can ÜNAL\n- Prof.Dr. Aylin YILDIZ\n- Dr.Öğr.Üyesi Umut BİLEN\n- Öğr.Gör.Dr. Ahmet Özgür AĞIRGAN\n- Öğr.Gör.Dr. Elif KALKANLI\n- Araş.Gör.Dr. Şerife ŞAFAK\n- Araş.Gör.Dr. Hayal OKTAY\n- Araş.Gör.Dr. Volkan YALI\n- Araş.Gör.Dr. Özgecan ERKAN"
+      ]
+    },
+
+    {
+      "tag": "staj_başvuru_adımları",
+      "patterns": ["staj başvurusu adımları", "staj başvuru süreci", "staj başvuru işlemleri"],
+      "responses": [
+        "Staj başvurusu için izlenmesi gereken adımlar şunlardır:\n\n1. Staj yapılacak kurumdan staj kabul yazısı alınması.\n\n2. Staj başvuru formunun doldurulması.\n\n3. Staj sigorta işlemlerinin tamamlanması.\n\n4. Staj yapılacak dönemin belirlenmesi ve staj başlama tarihlerinin belirlenen süre içinde tamamlanması.\n\nDaha fazla bilgi ve detaylar için [bu linki](https://cmf.nku.edu.tr/StajBa%C5%9Fvurusu%C4%B0%C3%A7in%C4%B0zlenmesiGerekenAd%C4%B1mlar/0/s/7023/8862)"
+      ]
+    },
+    
     {
       "tag":"staj_yönergesi",
       "patterns":["Çorlu Mühendislik fakültesi staj yönergesi", "staj yönergesi","staj bilgi"],
-      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajY%C3%B6nergesi/0/s/7023/4299"]
+      "responses":["Staj yönergesi için ilgili adres:https://cmf.nku.edu.tr/StajY%C3%B6nergesi/0/s/7023/4299"]
 
     },
     {
       "tag":"staj_tarihleri",
-      "patterns":["Çorlu Mühendislik fakültesi staj tarihleri","staj tarih","yaz staj"],
-      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajTarihleri/0/s/7023/8832"]
+      "patterns":["Çorlu Mühendislik fakültesi staj tarihleri","staj tarih","yaz staj tarihleri"],
+      "responses":["Yaz stajı için en erken başlama tarihi 8 Temmuz. En son tarihi ise 26 Ağustos'tur.Gerekli belgeler en az 10 gün önceden ilgili kişilere iletilmelidir.\nToplamda 5 dönem bulunmaktadır.\nDaha detaylı bilgi için ilgili adres:https://cmf.nku.edu.tr/StajTarihleri/0/s/7023/8832"]
 
     },
     {
-      "tag":"staj_belgeleri",
-      "patterns":["Çorlu Mühendislik fakültesi staj için gerekli belgeler","staj belgeri","yaz staj belgeleri","staj zorunluluk belgesi"],
-      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajBa%C5%9Fvurusu%C4%B0%C3%A7inGerekenEvraklar/0/s/7023/8834"]
+      "tag":"staj_tarihleri_dönem",
+      "patterns":["Çorlu Mühendislik fakültesinde yaz stajı için kaç dönem var?","yaz stajı dönemleri","yaz staj tarihleri dönem","staj tarihleri kaç dönem"],
+      "responses":["Yaz stajı için 5 dönem bulunmaktadır."]
 
+    },
+    
+      {
+        "tag": "staj_tarihleri_dönem_1",
+        "patterns": ["dönem 1 staj tarihleri", "staj dönem 1 tarihleri"],
+        "responses": [
+          "Staj dönemi 1 için staj evraklarının son teslim tarihi 28 Haziran 2024'tür.\nStaj dönemi 1 için staja başlama tarihi 8 Temmuz 2024'tür."
+        ]
+      },
+      {
+        "tag": "staj_tarihleri_dönem_2",
+        "patterns": ["dönem 2 staj tarihleri", "staj dönem 2 tarihleri"],
+        "responses": [
+          "Staj dönemi 2 için staj evraklarının son teslim tarihi 19 Temmuz 2024'tür.\nStaj dönemi 2 için staja başlama tarihi 29 Temmuz 2024'tür."
+        ]
+      },
+      {
+        "tag": "staj_tarihleri_dönem_3",
+        "patterns": ["dönem 3 staj tarihleri", "staj dönem 3 tarihleri"],
+        "responses": [
+          "Staj dönemi 3 için staj evraklarının son teslim tarihi 26 Temmuz 2024'tür.\nStaj dönemi 3 için staja başlama tarihi 5 Ağustos 2024'tür."
+        ]
+      },
+      {
+        "tag": "staj_tarihleri_dönem_4",
+        "patterns": ["dönem 4 staj tarihleri", "staj dönem 4 tarihleri"],
+        "responses": [
+          "Staj dönemi 4 için staj evraklarının son teslim tarihi 9 Ağustos 2024'tür.\nStaj dönemi 4 için staja başlama tarihi 19 Ağustos 2024'tür."
+        ]
+      },
+      {
+        "tag": "staj_tarihleri_dönem_5",
+        "patterns": ["dönem 5 staj tarihleri", "staj dönem 5 tarihleri"],
+        "responses": [
+          "Staj dönemi 5 için staj evraklarının son teslim tarihi 16 Ağustos 2024'tür.\nStaj dönemi 5 için staja başlama tarihi 26 Ağustos 2024'tür."
+        ]
+      },
+      {
+        "tag": "staj_tarihleri_dönem_yanlıs",
+        "patterns": ["dönem 6 staj tarihleri", "staj dönem 6 tarihleri","staj 7 ","staj 8","staj 9"],
+        "responses": [
+          "İstenilen staj dönemi bulunmamaktadır."
+        ]
+      },
+    
+    
+      {
+        "tag": "staj_belgeleri",
+        "patterns": [
+          "Çorlu Mühendislik fakültesi staj için gerekli belgeler",
+          "staj belgeleri",
+          "yaz staj belgeleri",
+          "staj zorunluluk belgesi"
+        ],
+        "responses": [
+          "Staj başvurusu için gereken belgeler:\n\n- Firmadan staj kabul yazısı,\n- Sigorta başlatma işlem belgesi,\n- SGK kurumundan alınacak Müstehaklık belgesi (SGK kurumundan veya E-devlet üzerinden alınabilir),\n- Staj zorunluluk belgesi.\n\nDaha detaylı bilgi için ilgili adres: [bu linki](https://cmf.nku.edu.tr/StajBa%C5%9Fvurusu%C4%B0%C3%A7inGerekenEvraklar/0/s/7023/8834)\n"
+        ]
+      },
+      
+      
+    {
+      "tag": "staj_komisyonu_bilgileri",
+      "patterns": [
+        "dekanlık staj komisyonu",
+        "dekan staj komisyonu",
+        "fakülte dekan staj komisyonu"
+      ],
+      "responses": [
+        "Dekanlık Staj Komisyonu üyesi: Doç. Dr. Gül KAYKIOĞLU"
+      ]
     },
     {
-      "tag":"staj_komisyon",
-      "patterns":["Çorlu Mühendislik fakültesi staj komisyon üyeleri","staj komisyonu","fakülte staj komisyonu"],
-      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/Komisyonlar-StajKomisyonu/0/s/7023/9321"]
-
+      "tag": "bilgisayar_mühendisliği_staj_komisyonu",
+      "patterns": [
+        "bilgisayar mühendisliği staj komisyonu",
+        "bilgisayar mühendisliği staj komite üyeleri"
+      ],
+      "responses": [
+        "Bilgisayar Mühendisliği Staj Komisyonu üyesi: Dr. Öğr. Üyesi Erkan ÖZHAN"
+      ]
     },
+    {
+      "tag": "biyomedikal_mühendisliği_staj_komisyonu",
+      "patterns": [
+        "biyomedikal mühendisliği staj komisyonu",
+        "biyomedikal mühendisliği staj komite üyeleri"
+      ],
+      "responses": [
+        "Biyomedikal Mühendisliği Staj Komisyonu üyesi: Dr. Öğr. Üyesi Sarkis SÖZKES"
+      ]
+    },
+    {
+      "tag": "çevre_mühendisliği_staj_komisyonu",
+      "patterns": [
+        "çevre mühendisliği staj komisyonu",
+        "çevre mühendisliği staj komite üyeleri"
+      ],
+      "responses": [
+        "Çevre Mühendisliği Staj Komisyonu üyesi: Dr. Öğr. Üyesi Tuba ÖZTÜRK"
+      ]
+    },
+    {
+      "tag": "elektrik_elektronik_mühendisliği_staj_komisyonu",
+      "patterns": [
+        "elektrik-elektronik mühendisliği staj komisyonu",
+        "elektrik-elektronik mühendisliği staj komite üyeleri",
+        "EE mühendisliği staj komite"
+      ],
+      "responses": [
+        "Elektrik-Elektronik Mühendisliği Staj Komisyonu üyesi: Dr. Öğr. Üyesi Meltem APAYDIN ÜSTÜN"
+      ]
+    },
+    {
+      "tag": "endüstri_mühendisliği_staj_komisyonu",
+      "patterns": [
+        "endüstri mühendisliği staj komisyonu",
+        "endüstri mühendisliği staj komite üyeleri"
+      ],
+      "responses": [
+        "Endüstri Mühendisliği Staj Komisyonu üyesi: Prof. Dr. Kemal Güven GÜLEN"
+      ]
+    },
+    {
+      "tag": "inşaat_mühendisliği_staj_komisyonu",
+      "patterns": [
+        "inşaat mühendisliği staj komisyonu",
+        "inşaat mühendisliği staj komite üyeleri"
+      ],
+      "responses": [
+        "İnşaat Mühendisliği Staj Komisyonu üyesi: Doç. Dr. Veysel AKYÜNCÜ"
+      ]
+    },
+    {
+      "tag": "makine_mühendisliği_staj_komisyonu",
+      "patterns": [
+        "makine mühendisliği staj komisyonu",
+        "makine mühendisliği staj komite üyeleri"
+      ],
+      "responses": [
+        "Makine Mühendisliği Staj Komisyonu üyesi: Doç. Dr. Sait Özmen ERUSLU"
+      ]
+    },
+    {
+      "tag": "tekstil_mühendisliği_staj_komisyonu",
+      "patterns": [
+        "tekstil mühendisliği staj komisyonu",
+        "tekstil mühendisliği staj komite üyeleri"
+      ],
+      "responses": [
+        "Tekstil Mühendisliği Staj Komisyonu üyesi: Prof. Dr. Ziya ÖZEK"
+      ]
+    },
+    
+      {
+        "tag":"staj_komisyon",
+        "patterns":["Çorlu Mühendislik fakültesi staj komisyon üyeleri","staj komisyonu","fakülte staj komisyonu"],
+        "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/Komisyonlar-StajKomisyonu/0/s/7023/9321"]
+  
+      },
+    
     {
       "tag":"staj_sözlesme",
       "patterns":["Çorlu Mühendislik fakültesi staj için işyeri staj sözleşmesi","staj sözleşmesi","sözleşme"],
-      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/%C4%B0%C5%9FyeriStajS%C3%B6zle%C5%9Fmesi/0/s/7023/23785"]
+      "responses":["İşyeri staj sözleşmesine link üzerinden ulaşabilirsiniz:https://cmf.nku.edu.tr/%C4%B0%C5%9FyeriStajS%C3%B6zle%C5%9Fmesi/0/s/7023/23785"]
 
     },
     {
       "tag":"staj_defteri",
       "patterns":["Çorlu Mühendislik fakültesi staj için staj defteri","staj defteri","defter","pratik çalışma belgesi"],
-      "responses":["İlgili bilgiye bu adresten ulaşabilirsiniz:https://cmf.nku.edu.tr/StajDefteri/0/s/7023/29399"]
+      "responses":["Staj defterini bu adres üzerinden bulabilirsiniz:https://cmf.nku.edu.tr/StajDefteri/0/s/7023/29399"]
 
     },
+    {
+      "tag": "staj_okula_gelmeden",
+      "patterns": [
+        "okula gelmeden staj belgelerini iletme",
+        "okula gelmeden staj",
+        "okula gelmeden staj belgelerini onaylatma",
+        "online staj onayı"
+      ],
+      "responses": [
+          "Staja başlamak için gerekli evrakları [bu linkten](https://cmf.nku.edu.tr/StajBa%C5%9Fvurusu%C4%B0%C3%A7inGerekenEvraklar/0/s/7023/8834) (3 adet) taratıp 3 ayrı PDF olarak staj komisyonu üyelerini alıcı listesine ekleyip (eozhan@nku.edu.tr, bsevinc@nku.edu.tr, gusanmaz@nku.edu.tr) gönderiniz.\n E-postada, staj yapmak istediğiniz firmanın web sitesini yazmanız ve eğer bilginiz varsa orada yapacağınız işler konusunda bilgi vermeniz önerilir.\n Komisyondan Onay/Uygundur e-postası aldıktan sonra gelen e-postayı cmfstaj@nku.edu.tr adresine yönlendiriniz.\n"
+      ]
+    },
+    {
+      "tag": "nkuzem_giris",
+      "patterns": ["NKÜ uzaktan eğitim sistemine giriş","NKUZEM giriş","online derslere erişim","NKUZEM","ALMS giriş","ALMS"],
+      "responses": ["NKUZEM'e giriş linki:https://nkuzem.nku.edu.tr/ Bu link üzerinden açılan sayfadaki 'Sisteme giriş' kısmına tıklayanız.\n Çıkan ekranda (https://lms.nku.edu.tr/Account/LoginBefore) ilk önce okul numaranızı giriniz(@nku.edu.tr uzantısını kullanmayınız!!!) ve ileriye tıklayanız.\n Ardından okul mail adresinizin şifresiyle girişinizi tamamlayın."]
+    },
+    {
+      "tag": "nkuotomasyon_giris",
+      "patterns": ["NKÜ otomasyon sistemine giriş","TNKÜ otomasyon giriş","ders notlarına erişim","otomasyon","haftalık ders programı"],
+      "responses": ["NKÜ Otomasyona giriş linki:https://ogr.nku.edu.tr/\n Çıkan ekrana okul numaranızı, şifrenizi ve en alt kısımda bulunan doğrulama kodunu girerek sisteme giriş yapabilirsiniz. "]
+    },
+
     {
       "tag": "unknown",
       "patterns": [],
