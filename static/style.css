@@ -19,7 +19,7 @@ body {
 }
 
 #chatbox {
-    width: 60%; 
+    width: 75%; 
     margin: 20px auto;
     background-color: #f6f7f8; 
     border-radius: 10px;
@@ -96,7 +96,7 @@ button:hover {
 }
 
 .dark-theme .bot-message {
-    background-color: #395B64; 
+    background-color: #59676b; 
     color:#ccc;
 }
 
@@ -106,6 +106,21 @@ button:hover {
 
 /* Medya Sorguları */
 @media only screen and (max-width: 600px) {
+    #chatbox {
+        width: max-content;
+    }
+    
+    #user-input {
+        width: min-content;
+        margin-top: 5px;
+    }
+    
+    button {
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width: 250px) {
     #chatbox {
         width: max-content;
     }
