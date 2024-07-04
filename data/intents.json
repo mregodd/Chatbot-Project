@@ -21,15 +21,30 @@
       "patterns": ["Hoşçakal", "Görüşürüz", "Bay bay"],
       "responses": ["Hoşçakal!", "Görüşürüz!", "Kendine iyi bak!"]
     },
+	{
+      "tag": "genel_bilgi",
+      "patterns": ["genel bilgi", "genelbilgi"],
+      "responses": ["üniversite konum\n- dekan\n- dekan yardımcıları\n- bölüm hocaları\n- staj başvuru\n- staj yönergesi\n- staj tarihleri\n-staj dönemleri\n- staj komisyonu\n- staj defteri\n- staj sözleşmesi\n-uzaktan staj başvuru\n- nku otomasyon giriş\n- nkuzem giriş"]
+    },
     {
       "tag": "teşekkür",
       "patterns": ["Teşekkürler", "Sağ ol", "Teşekkür ederim"],
       "responses": ["Rica ederim!", "Her zaman!", "Başka bir sorunuz var ise yardımcı olmak isterim."]
     },
+	{
+      "tag": "staj_komisyonu_bölüm_sorgu",
+      "patterns": ["staj komisyonu"],
+      "responses": ["Sorgulayabileceğiniz staj komisyon bölümleri:\n-bilgisayar mühendisliği staj komisyonu\n-makine mühendisliği staj komisyonu\n-biyomedikal mühendisliği staj komisyonu\n-inşaat mühendisliği staj komisyonu\n-tekstil mühendisliği staj komisyonu\n-elektrik elektronik mühendisliği staj komisyonu\n-endüstri mühendisliği staj komisyonu\n-çevre mühendisliği staj komisyonu"]
+    },
     {
       "tag": "üniversite_konum_bilgi",
       "patterns": ["Fakülte nerede?", "Fakülte'nin konumu hakkında bilgi istiyorum.","fakülte konum"],
       "responses": ["Üniversitemiz Tekirdağ'da Çorlu İlçesinde yer almaktadır.", "Kampüsümüz Silahtarağa, Üniversite 1.Sokak No:13, 59860 Çorlu/Tekirdağ adresindedir."]
+    },
+	{
+      "tag": "bölüm_hocaları_sorgu",
+      "patterns": ["bölüm hocaları"],
+      "responses": ["Bölüm ismi ile birlikte sorgulayabilecekleriniz; bölüm başkanı, bölüm hocaları, bölüm akademik kadro. Örneğin: Bilgisayar Mühendisliği akademik kadro."]
     },
 	{
       "tag": "dekan_bilgi",
@@ -134,7 +149,7 @@
     {
       "tag": "bölümler_hocaları_bilgi",
       "patterns": ["Çorlu Mühendislik fakültesi akademik kadro","ÇMF akademik kadro","fakülte akademik kadro"],
-      "responses": ["İlgili bilgiye bu adresten ulaşabilirsiniz: https://cmf.nku.edu.tr/Kurumsal-AkademikPersonel/0/s/9790/20906"]
+      "responses": ["Ayrıntılı bilgiye bu adresten ulaşabilirsiniz: https://cmf.nku.edu.tr/Kurumsal-AkademikPersonel/0/s/9790/20906"]
     },
     
     {
@@ -243,7 +258,7 @@
 
     {
       "tag": "staj_başvuru_adımları",
-      "patterns": ["staj başvurusu adımları", "staj başvuru süreci", "staj başvuru işlemleri"],
+      "patterns": ["staj başvurusu adımları", "staj başvuru süreci", "staj başvuru işlemleri","staj başvuru"],
       "responses": [
         "Staj başvurusu için izlenmesi gereken adımlar şunlardır:\n\n1. Staj yapılacak kurumdan staj kabul yazısı alınması.\n\n2. Staj başvuru formunun doldurulması.\n\n3. Staj sigorta işlemlerinin tamamlanması.\n\n4. Staj yapılacak dönemin belirlenmesi ve staj başlama tarihlerinin belirlenen süre içinde tamamlanması.\n\nDaha fazla bilgi ve detaylar için [bu linki](https://cmf.nku.edu.tr/StajBa%C5%9Fvurusu%C4%B0%C3%A7in%C4%B0zlenmesiGerekenAd%C4%B1mlar/0/s/7023/8862)"
       ]
@@ -263,7 +278,7 @@
     },
     {
       "tag":"staj_tarihleri_dönem",
-      "patterns":["Çorlu Mühendislik fakültesinde yaz stajı için kaç dönem var?","yaz stajı dönemleri","yaz staj tarihleri dönem","staj tarihleri kaç dönem"],
+      "patterns":["Çorlu Mühendislik fakültesinde yaz stajı için kaç dönem var?","yaz stajı dönemleri","yaz staj tarihleri dönem","staj tarihleri kaç dönem","staj dönemleri"],
       "responses":["Yaz stajı için 5 dönem bulunmaktadır."]
 
     },
@@ -444,7 +459,8 @@
         "okula gelmeden staj belgelerini iletme",
         "okula gelmeden staj",
         "okula gelmeden staj belgelerini onaylatma",
-        "online staj onayı"
+        "online staj onayı",
+		"staj_okula_gelmeden"
       ],
       "responses": [
           "Staja başlamak için gerekli evrakları [bu linkten](https://cmf.nku.edu.tr/StajBa%C5%9Fvurusu%C4%B0%C3%A7inGerekenEvraklar/0/s/7023/8834) (3 adet) taratıp 3 ayrı PDF olarak staj komisyonu üyelerini alıcı listesine ekleyip (eozhan@nku.edu.tr, bsevinc@nku.edu.tr, gusanmaz@nku.edu.tr) gönderiniz.\n E-postada, staj yapmak istediğiniz firmanın web sitesini yazmanız ve eğer bilginiz varsa orada yapacağınız işler konusunda bilgi vermeniz önerilir.\n Komisyondan Onay/Uygundur e-postası aldıktan sonra gelen e-postayı cmfstaj@nku.edu.tr adresine yönlendiriniz.\n"
